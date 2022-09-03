@@ -51,7 +51,7 @@ module.exports = {
   },
   markIncomplete: async (req, res) => {
     try {
-      await Todo.findOneAndUpdate(
+      await Appointment.findOneAndUpdate(
         { _id: req.body.todoIdFromJSFile },
         {
           completed: false,
