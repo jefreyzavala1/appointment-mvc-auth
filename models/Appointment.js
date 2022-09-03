@@ -1,3 +1,4 @@
+const { Timestamp } = require('mongodb')
 const mongoose = require('mongoose')
 
 const AppointmentSchema = new mongoose.Schema({
@@ -10,6 +11,21 @@ const AppointmentSchema = new mongoose.Schema({
     required: true,
   },
   userId: {
+    type: String,
+    required: true
+  },
+
+  appointmentDate:{
+   type: Date,
+   required: true
+  },
+
+  appointmentTime:{
+  type: String,
+  required: true
+  },
+
+  notes: {
     type: String,
     required: true
   }

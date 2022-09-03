@@ -13,6 +13,9 @@
     <% appointments.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.appointment %></span>
+                <span><%= el.appointmentDate %></span>
+                <span><%= el.appointmentTime %></span>
+                <span><%= el.notes %></span>
                 <span class='del'> Delete </span>
             </li>
     <% }) %>    
@@ -25,10 +28,10 @@
         <input type="submit">
     </form> -->
 
-    <form>
+    <form action="/appointments/createAppointment" method='POST'>
         <div>
             <label for="appointment">Enter appointment: </label>
-            <input id="appointment" type="text" placeholder="Enter appointment" name='todoItem'>
+            <input id="appointment" type="text" placeholder="Enter appointment" name='appointment'>
         </div>
         
             <label for="date">Select date: </label>
@@ -44,7 +47,7 @@
             <textarea class="form-control" id="appointmentNotes" name="notes" rows="3" placeholder="Notes.."></textarea>
           </div>
           <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            <button type="submit">Submit</button>
           </div>
         </div>
       </form>
