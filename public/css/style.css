@@ -1,6 +1,6 @@
 h1{
     color: red;
-    font-family: 'Caveat', cursive;
+    
 }
 .completed{
     text-decoration: line-through;
@@ -11,17 +11,64 @@ h1{
 }
 
 .mx-auto{
-    width: 200px;
+    /* width: 25%; */
     /* border: 2px solid black; */
-    margin-top: 10%;
+     margin-top: 15%;
+    border-radius: 25px;
+    /* border: 2px solid #73AD21; */
+    background-color: rgb(218, 218, 218);
+    padding: 20px;
+    width: 25%;
+    height: 250px;
+}
+.mx-auto h1{
+    color: black;
+    text-align: center;
+    margin-bottom: 15%;
 }
 
 a{
     display: inline-block;
-    width: 45%;
+    border: 2px solid red;
+    padding: 5px;
+    padding-left: 25px;
+    width: 25%;
 }
+
+a:first-of-type{
+   
+    color: white;
+    margin-left: 20%;
+    margin-right: 5%;
+}
+
+a:nth-last-of-type(1){
+    color: white;
+    
+}
+
+nav{
+    border: 1px solid black;
+    height: 70px;
+    width: 100%;
+}
+
+nav div{
+    float: left;
+    width: 3%;
+}
+
+nav div + div{
+    margin-top: 1%;
+   color: rgb(153, 152, 152);
+}
+
 
 form {
 /* border: 1px solid black; */
     width: 25%;
+}
+
+body{
+    background-color: rgb(208, 208, 208);
 }
