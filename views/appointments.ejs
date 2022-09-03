@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
+    <h1>Appointments</h1>
     <ul>
     <% appointments.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
@@ -20,10 +20,34 @@
 
     <h2><%= user.userName %> has <%= left %> things left to do.</h2>
 
-    <form action="/appointments/createAppointment" method='POST'>
+    <!-- <form action="/appointments/createAppointment" method='POST'>
         <input type="text" placeholder="Enter Todo Item" name='todoItem'>
         <input type="submit">
-    </form>
+    </form> -->
+
+    <form>
+        <div>
+            <label for="appointment">Enter appointment: </label>
+            <input id="appointment" type="text" placeholder="Enter appointment" name='todoItem'>
+        </div>
+        
+            <label for="date">Select date: </label>
+            <input id="date" type="date" name="appointmentDate" placeholder="Enter Todo Item" min="2018-01-01" max="2018-12-31">
+        </div>
+        <div>
+            <label for="time">Enter time: </label>
+            <input id="time" type="time" name ="appointmentTime" placeholder="Enter Todo Item" min="2018-01-01" max="2018-12-31">
+        </div>
+
+
+        <div>
+            <textarea class="form-control" id="appointmentNotes" name="notes" rows="3" placeholder="Notes.."></textarea>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+          </div>
+        </div>
+      </form>
 
     <a href="/logout">Logout</a>
 
