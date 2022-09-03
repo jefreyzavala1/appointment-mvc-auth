@@ -10,7 +10,7 @@ h1{
     text-decoration: underline;
 }
 
-.mx-auto, .login{
+.mx-auto, .login, .signup{
     /* width: 25%; */
     /* border: 2px solid black; */
      margin-top: 15%;
@@ -81,6 +81,16 @@ body{
     text-align: center;
 }
 
-.btn-success{
+.centerIt{
     margin-left: 40%;
+}
+
+.signup{
+    border: 1px solid black;
+    height: 500px;
+    margin-left: 35%;
+    margin-top: 5%;
+    width: 25%;
+    border-radius: 40px;
+    
 }

@@ -4,20 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="/css/style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <div>
+          <span
+            id="boot-icon"
+            class="bi bi-calendar-week"
+            style="
+              font-size: 46px;
+              color: rgb(128, 128, 128);
+              opacity: 0.7;
+              -webkit-text-stroke-width: 0px;
+            "
+          ></span>
+        </div>
+        <div>
+          <span class="h2">Appointy</span>
+        </div>
+      </nav>
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/signup" method="POST">
-        <input type="text" name="userName" placeholder="User Name">
+    <form action="/signup" method="POST" class="signup">
+        <!-- <input type="text" name="userName" placeholder="User Name">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit">
+        <input type="submit"> -->
+        <h2 class="h2">Sign Up</h2>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="userName" class="form-control"  placeholder="">
+
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input id="email" type="email" name="email" class="form-control" placeholder="">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" name="password" class="form-control"  placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input id="confirmPassword" type="password" name="confirmPassword" class="form-control"  placeholder="">
+          </div>
+        <button type="submit" class="btn btn-primary centerIt">Sign Up</button>
     </form>
 </body>
 </html>
