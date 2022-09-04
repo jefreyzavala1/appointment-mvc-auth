@@ -1,44 +1,31 @@
-# Introduction
+# Appointy
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+A Simple Appointment App built using the MVC Architecture. We have also implemented "authorization" so folx can sign up and keep track of their appointments.
 
----
+**Link to project:** TBD
 
-> Be sure to add that lovely star 😀 and fork it for your own copy
+![alt tag](https://ibb.co/GvbDjbM)
 
----
+## How It's Made:
 
-# Objectives
+**Tech used:** HTML, CSS, JavaScript
 
-- It's a beginner level app created to understand how MVC concept and logins are added
 
----
+## Optimizations
 
-# Who is this for? 
+When we improve this project, we would add a calendar view and email reminder functionality.
 
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
+## Lessons Learned:
 
----
+TBD
 
-# Packages/Dependencies used 
+## Examples:
+Take a look at these couple examples that we have in our own portfolio:
 
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
+**Example A:** TBD
 
----
+**Example B:** TBD
 
-# Install all the dependencies or node packages used for development via Terminal
-
-`npm install` 
-
----
-
-# Things to add
-
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
+**Example C:** TBD
 
 
