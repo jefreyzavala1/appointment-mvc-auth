@@ -4,7 +4,7 @@ A Simple Appointment App built using the MVC Architecture. We have also implemen
 
 **Link to project:** TBD
 
-![alt tag](https://ibb.co/GvbDjbM)
+![alt tag](https://i.ibb.co/PZfy8fW/github-appointy-index-pic.png)
 
 ## How It's Made:
 
