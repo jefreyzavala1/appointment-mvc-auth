@@ -1,7 +1,37 @@
+body{
+    margin: 0;
+    background-color: #E4E4E4;
+    height: 100%;
+}
+
+button{
+    margin: auto;
+}
+
+input{
+    width: 100%
+}
+
 h1{
-    color: red;
+    margin: 0;
+    padding: 0; 
+    font-size: 3rem;
+    text-align: center;
     
 }
+
+h2{
+    text-align: center;
+}
+
+input{
+    display: block;
+}
+
+li{
+    padding-left: 0;
+}
+
 .completed{
     text-decoration: line-through;
     color: gray;
@@ -10,47 +40,123 @@ h1{
     text-decoration: underline;
 }
 
-.mx-auto, .login, .signup{
-    /* width: 25%; */
-    /* border: 2px solid black; */
-     margin-top: 15%;
-    border-radius: 25px;
-    /* border: 2px solid #73AD21; */
-    background-color: white;
-    padding: 20px;
-    width: 25%;
-    height: 250px;
+.img_completed{
+    background-image: url('/assets/Complete_Button.svg');
+    width: 20px;
+    height: 20px;
+    border: none;
 }
+
+.img_not{
+    background-image: url('/assets/Pending_Button.svg');
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+form, .portal-form{
+    background-color: white;
+    box-shadow: 0px 0px 20px #9A9A9A;
+    border-radius: 40px;
+    padding: 3em 4em;
+}
+
+.portal-form{
+    gap: 10px;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+.mx-auto{
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
 .mx-auto h1{
     color: black;
     text-align: center;
-    margin-bottom: 15%;
+    margin: 0rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.appointment-container{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 2em;
+    height: 100%;
+    margin-top: 2em;
+    padding: 3em 0em;
+}
+
+.mx-auto-appointments{
+    background-color: #E4E4E4;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.appointment-display{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    align-items: center;
+    justify-content: start;
+    box-shadow: 0px 0px 20px #9A9A9A;
+    border-radius: 40px;
+    padding: 3em 4em;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
 }
 
 a{
-    display: inline-block;
-    border: 2px solid red;
-    padding: 5px;
-    padding-left: 25px;
-    width: 25%;
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+    vertical-align: bottom;
+    line-height: 40px;
 }
 
-a:first-of-type{
-   
-    color: white;
-    margin-left: 20%;
-    margin-right: 5%;
-}
 
 a:nth-last-of-type(1){
     color: white;
-    
 }
+
+
+.h2{
+    text-align: center;
+}
+
+.signup{
+    padding: 1em 3em;
+    width: 400px;
+}
+
+/* --NAV BAR--*/
+
 
 nav{
     /* border: 1px solid black; */
+    position: absolute;
+    top: 0;
     height: 70px;
     width: 100%;
+    padding: 0em 1em;
 }
 
 nav div{
@@ -64,33 +170,101 @@ nav div + div{
 }
 
 
-
-
-body{
-    background-color: rgb(208, 208, 208);
+/* LOGO */
+.logo-container{
+    margin-top: 1.2%;
+    margin-right: 0.5em;
+    width: 50px;
 }
 
-.login{
-    /* border: 1px solid black; */
-    margin-left: 35%;
-    height: 320px;
-    margin-top: 13%;
-    
-}
-.h2{
+/*--BUTTONS--*/
+
+/*LOGIN*/
+
+.login-container{
     text-align: center;
+    margin: auto;
 }
 
-.centerIt{
-    margin-left: 40%;
+.login-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/assets/Login_Button_BG.svg');
+    border: none;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100px;
+    height: 50px;
+    margin: auto;
 }
 
-.signup{
-    border: 1px solid black;
-    height: 500px;
-    margin-left: 35%;
-    margin-top: 5%;
-    width: 25%;
-    border-radius: 40px;
+.login-submit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
+}
+
+/*--SIGN UP--*/
+.signup-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/assets/Sign_Up_Button_BG.svg');
+    border: none;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100px;
+    height: 50px;
+    margin: auto;
+}
+
+/*PORTAL*/
+
+.portal-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+}
+
+/*APPOINTMENT PAGE*/
+
+.todoItem-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    min-height: 100px;
+}
+
+.todoItem{
+    margin-bottom: 0.5rem;
+    position: relative;
+    margin-right: 1em;
+    padding-right: 1em;
+}
+
+.todo-notes{
+    display: block;
+}
+
+.todo-title{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.del{
+    background-image: url('/assets/Delete_Button.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height:20px;
+    position: absolute;
+    left:100%;
+    top:0;
+    cursor: pointer;
 }

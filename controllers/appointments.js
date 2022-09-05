@@ -1,5 +1,6 @@
 const Appointment = require("../models/Appointment");
 
+
 module.exports = {
   getAppointments: async (req, res) => {
     console.log(req.user);

@@ -13,55 +13,39 @@
     <title>Appointy</title>
 </head>
 <body>
-    <nav>
-        <div>
-          <span
-            id="boot-icon"
-            class="bi bi-calendar-week"
-            style="
-              font-size: 46px;
-              color: rgb(128, 128, 128);
-              opacity: 0.7;
-              -webkit-text-stroke-width: 0px;
-            "
-          ></span>
-        </div>
-        <div>
-          <span class="h2">Appointy</span>
-        </div>
-      </nav>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/signup" method="POST" class="signup">
-        <!-- <input type="text" name="userName" placeholder="User Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit"> -->
-        <h2 class="h2">Sign Up</h2>
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input id="username" type="text" name="userName" class="form-control"  placeholder="">
-
-        </div>
-        <div class="form-group">
-          <label for="email">Email address</label>
-          <input id="email" type="email" name="email" class="form-control" placeholder="">
-        </div>
-        
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input id="password" type="password" name="password" class="form-control"  placeholder="">
-        </div>
-
-        <div class="form-group">
-            <label for="confirmPassword">Confirm Password</label>
-            <input id="confirmPassword" type="password" name="confirmPassword" class="form-control"  placeholder="">
+  <%-include ('partials/navbar') %>
+    <div class="mx-auto">
+      <form action="/signup" method="POST" class="signup">
+          <!-- <input type="text" name="userName" placeholder="User Name">
+          <input type="email" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <input type="password" name="confirmPassword" placeholder="Confirm Password">
+          <input type="submit"> -->
+          <h2 class="h2">Sign Up</h2>
+          <div class="form-group">
+              <label for="username">Username</label>
+              <input id="username" type="text" name="userName" class="form-control"  placeholder="">
           </div>
-        <button type="submit" class="btn btn-primary centerIt">Sign Up</button>
-    </form>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input id="email" type="email" name="email" class="form-control" placeholder="">
+          </div>
+      
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" class="form-control"  placeholder="">
+          </div>
+          <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input id="confirmPassword" type="password" name="confirmPassword" class="form-control"  placeholder="">
+            </div>
+          <div id="login-submit"><button type="submit" class="signup-button">Sign Up</button></div>
+      </form>
+    </div>
+    <% if (locals.messages.errors) { %>
+      <% messages.errors.forEach( el => { %>
+          <div class="alert alert-danger"><%= el.msg %></div>
+      <% }) %>    
+  <% } %>
 </body>
 </html>
