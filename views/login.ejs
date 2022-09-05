@@ -31,35 +31,21 @@
         <input type="submit">
     </form> 
 </div>-->
-<nav>
-    <div>
-      <span
-        id="boot-icon"
-        class="bi bi-calendar-week"
-        style="
-          font-size: 46px;
-          color: rgb(128, 128, 128);
-          opacity: 0.7;
-          -webkit-text-stroke-width: 0px;
-        "
-      ></span>
+  <%-include ('partials/navbar') %>
+    <div class="mx-auto">
+      <form action="/login" method="POST" class="login">
+          <div class="form-group">
+              <h2 class="h2">Log In</h2>
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control"  placeholder="Password">
+          </div>
+          <div id="login-submit"><button type="submit" class="login-button">Login</button></div>
+        </form>
     </div>
-    <div>
-      <span class="h2">Appointy</span>
-    </div>
-  </nav>
-    <form action="/login" method="POST" class="login">
-        <div class="form-group">
-            <h2 class="h2">Log In</h2>
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" name="password" class="form-control"  placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-success centerIt">Login</button>
-      </form>
 </body>
 </html>

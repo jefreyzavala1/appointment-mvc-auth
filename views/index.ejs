@@ -24,29 +24,17 @@
     <link href="/css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <nav>
-      <div>
-        <span
-          id="boot-icon"
-          class="bi bi-calendar-week"
-          style="
-            font-size: 46px;
-            color: rgb(128, 128, 128);
-            opacity: 0.7;
-            -webkit-text-stroke-width: 0px;
-          "
-        ></span>
-      </div>
-      <div>
-        <span class="h2">Appointy</span>
-      </div>
-    </nav>
+    <%-include ('partials/navbar') %>
     <div class="mx-auto">
-      <h1 class="h1">Appointy Portal</h1>
-      <!-- <a href="/login"> Login</a>
-    <a href="/signup"> Signup</a> -->
-      <a href="/login" class="btn-success" role="button">Login</a>
-      <a href="/signup" class="btn-primary " role="button">Signup</a>
+      <div class="portal-form">
+        <h1 class="h1">Appointy Portal</h1>
+        <!-- <a href="/login"> Login</a>
+            <a href="/signup"> Signup</a> -->
+        <div class="portal-container">
+          <div class="login-container"><a href="/login" class="login-button">Login</a></div>
+          <a href="/signup" class="signup-button">Signup</a>
+        </div>
+      </div>
     </div>
   </body>
 </html>

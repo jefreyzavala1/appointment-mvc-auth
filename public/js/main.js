@@ -1,6 +1,7 @@
 const deleteBtn = document.querySelectorAll('.del')
 const todoItem = document.querySelectorAll('span.not')
 const appointmentComplete = document.querySelectorAll('span.completed')
+const checkMarks = document.querySelectorAll('button.status-toggle-button')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteAppointment)
@@ -13,6 +14,7 @@ Array.from(todoItem).forEach((el)=>{
 Array.from(appointmentComplete).forEach((el)=>{
     el.addEventListener('click', markIncomplete)
 })
+
 
 async function deleteAppointment(){
     const todoId = this.parentNode.dataset.id
@@ -33,7 +35,7 @@ async function deleteAppointment(){
 }
 
 async function markComplete(){
-    const todoId = this.parentNode.dataset.id
+    const todoId = this.parentNode.dataset.id;
     try{
         const response = await fetch('appointments/markComplete', {
             method: 'put',
