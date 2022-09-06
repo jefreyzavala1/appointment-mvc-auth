@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/100efb9ac7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -47,16 +48,9 @@
                             <div class="todoItem-container">
                                 
                                 <li class='todoItem' data-id='<%=el._id%>'>
-                                    <!-- <img class='<%=el.completed === true?'img_completed':'img_not' %>'/>                          
-                                    <span class='<%= el.completed === true ? 'completed' : 'not'%> todo-title'><%= el.appointment %></span>
-                                    <span>on <%= el.appointmentDate.toLocaleDateString('en-US', {weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'}) %></span>
-                                    <span>at <%= el.appointmentTime %></span>
-                                    <span class="todo-notes">Notes: <%= el.notes %></span>
-                                    <span class='del'></span> -->
                                     <img class='<%=el.completed === true?'img_completed':'img_not' %>'/>  
                                     <span class='<%= el.completed === true ? 'completed' : 'not'%> todo-title'><%= el.appointment %></span>
                                     <span>on <%= el.appointmentDate.toLocaleDateString('en-DE', {dateStyle: 'full'}) %></span>
-                                    <span>at <%= el.appointmentDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }) %></span>
                                     <span>at <%= el.appointmentTime %></span>
                                     <span class="todo-notes">Notes: <%= el.notes %></span>
                                     <span class='del'></span>
@@ -70,7 +64,20 @@
     </div>
     </div>
 
-    <a href="/logout" style="color: red; margin-left: 40%;">Logout</a>
+    <!-- Logout -->
+
+    <!-- Option 1: Simple Version (Commented out) -->
+    <!-- <a href="/logout" style="color: gray; margin-left: 50%;">Logout</a> -->
+
+    <!-- Option 2: Animated Version -->
+    <div class="navigation">
+        <a class="nav-button" href="/logout">
+            <span class="nav-img">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </span>
+            <div class="logout">LOGOUT</div>
+        </a>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
