@@ -25,11 +25,11 @@
                 </div>
                 <div class="form-group">
                     <label for="date">Select date: </label>
-                    <input id="date" type="date" name="appointmentDate" placeholder="Enter Todo Item" min="2018-01-01" max="2018-12-31">
+                    <input id="date" type="date" name="appointmentDate" placeholder="Enter Todo Item" min="2018-01-01" max="2050-12-31">
                 </div>
                 <div class="form-group">
                     <label for="time">Enter time: </label>
-                    <input id="time" type="time" name ="appointmentTime" placeholder="Enter Todo Item" min="2018-01-01" max="2018-12-31">
+                    <input id="time" type="time" name ="appointmentTime" placeholder="Enter Todo Item" min="00:00:00" max="23:59:59">
                 </div>
                 <div class="form-group">
                     <textarea class="form-control" id="appointmentNotes" name="notes" rows="3" placeholder="Notes.."></textarea>
@@ -41,17 +41,25 @@
             <div class="appointment-display">
                 <ul id="appointment-list">
                     <h1>Your Appointments</h1>
-                    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+                    <h2><%= user.userName %> has <%= left %> appointments coming up.</h2>
                     <% appointments.forEach( el => { %>
                             <div class="todoItem-container">
                                 
                                 <li class='todoItem' data-id='<%=el._id%>'>
-                                    <img class='<%=el.completed === true?'img_completed':'img_not' %>'/>                          
+                                    <!-- <img class='<%=el.completed === true?'img_completed':'img_not' %>'/>                          
                                     <span class='<%= el.completed === true ? 'completed' : 'not'%> todo-title'><%= el.appointment %></span>
                                     <span>on <%= el.appointmentDate.toLocaleDateString('en-US', {weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'}) %></span>
                                     <span>at <%= el.appointmentTime %></span>
                                     <span class="todo-notes">Notes: <%= el.notes %></span>
+                                    <span class='del'></span> -->
+                                    <img class='<%=el.completed === true?'img_completed':'img_not' %>'/>  
+                                    <span class='<%= el.completed === true ? 'completed' : 'not'%> todo-title'><%= el.appointment %></span>
+                                    <span>on <%= el.appointmentDate.toLocaleDateString('en-DE', {dateStyle: 'full'}) %></span>
+                                    <span>at <%= el.appointmentDate.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }) %></span>
+                                    <span>at <%= el.appointmentTime %></span>
+                                    <span class="todo-notes">Notes: <%= el.notes %></span>
                                     <span class='del'></span>
+
                                 </li>
                             </div>
                     <% }) %>
