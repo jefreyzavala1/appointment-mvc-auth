@@ -22,6 +22,15 @@ TBD
 ## Examples:
 Take a look at these couple examples that we have in our own portfolio:
 
+## Team Members:
+Here is the our group of developers:
+BikeMouse#4739
+doremisofafa#5907
+Naughty Nerdy#5042
+Jeff05#7707
+Stoneoven#5976
+mikelee53#5933
+
 **Example A:** TBD
 
 **Example B:** TBD
