@@ -6,6 +6,8 @@ A Simple Appointment App built using the MVC Architecture. We have also implemen
 
 ![alt tag](https://i.ibb.co/092bbtB/appointy-home.png)
 
+![alt tag](https://i.ibb.co/m0gZPxR/appointy-logout.png)
+
 ## How It's Made:
 
 **Tech used:** HTML, CSS, JavaScript
