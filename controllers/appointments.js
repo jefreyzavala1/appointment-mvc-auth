@@ -21,11 +21,17 @@ module.exports = {
   },
   createAppointment: async (req, res) => {
     console.log(req.body)
+    function convertTimeFormatToTwelve(t) {
+      let timeArray = t.split(':');
+      let h = timeArray[0], m = timeArray[1];
+      let twelveHourTime = (h > 12) ? (h-12 + ':' + m + ' PM') : (h + ':' + m + ' AM');
+      return twelveHourTime;
+    }
     try {
       await Appointment.create({
         appointment: req.body.appointment,
         appointmentDate: req.body.appointmentDate,
-        appointmentTime: req.body.appointmentTime,
+        appointmentTime: convertTimeFormatToTwelve(req.body.appointmentTime),
         notes: req.body.notes,
         completed: false,
         userId: req.user.id,
