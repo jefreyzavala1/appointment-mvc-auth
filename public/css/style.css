@@ -355,7 +355,7 @@ nav div + div {
 
   .scroll {
     width: 300px;
-    height: 50%;
+    height: 30%;
     overflow: auto;
     text-align: justify;
     padding: 20px;
@@ -369,6 +369,12 @@ nav div + div {
     font-size: 10px;
     height: 20px;
   }
+
+  .nav-button{
+    width: 10%;
+    height: 10%;
+  }
+  
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
