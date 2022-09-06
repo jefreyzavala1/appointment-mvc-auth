@@ -13,7 +13,7 @@ A Simple Appointment App built using the MVC Architecture. We have also implemen
 
 ## Optimizations
 
-When we improve this project, we would add a calendar view and email reminder functionality.
+When we improve this project, we would add a calendar view and email reminder functionality. Also, appointments can be sorted by date/time.
 
 ## Lessons Learned:
 
