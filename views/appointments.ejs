@@ -17,7 +17,7 @@
     <%-include ('partials/navbar') %>
     <div class="mx-auto-appointments">
         <div class="appointment-container">
-            <form action="/appointments/createAppointment" method='POST'>
+            <form action="/appointments/createAppointment" method='POST' class="shrink">
                 <h1>Appointment Info</h1>
                 <div class="form-group">
                     <label for="appointment">Enter appointment: </label>
@@ -31,7 +31,7 @@
                     <label for="time">Enter time: </label>
                     <input id="time" type="time" name ="appointmentTime" placeholder="Enter Todo Item" min="00:00:00" max="23:59:59">
                 </div>
-                <div class="form-group">
+                <div class="form-group text">
                     <textarea class="form-control" id="appointmentNotes" name="notes" rows="3" placeholder="Notes.."></textarea>
                   </div>
                   <div class="col-auto">
@@ -42,6 +42,7 @@
                 <ul id="appointment-list">
                     <h1>Your Appointments</h1>
                     <h2><%= user.userName %> has <%= left %> appointments coming up.</h2>
+                    <div class="scroll">
                     <% appointments.forEach( el => { %>
                             <div class="todoItem-container">
                                 
@@ -67,8 +68,9 @@
             </div>
         </div>
     </div>
+    </div>
 
-    <a href="/logout">Logout</a>
+    <a href="/logout" style="color: red; margin-left: 40%;">Logout</a>
 
     <script src="js/main.js"></script>
 </body>
