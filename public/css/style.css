@@ -269,52 +269,51 @@ nav div + div {
     /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: space-around;
   }
 
-  .shrink , .appointment-display{
+  .shrink,
+  .appointment-display {
     /* border: 2px solid blue; */
     width: 100%;
     height: 350px;
   }
 
-  .shrink *{
+  .shrink * {
     font-size: 12px;
   }
 
-  .col-auto *{
+  .col-auto * {
     /* border: 1px solid red; */
     width: 40%;
     margin-left: 27%;
   }
 
-  .col-auto{
+  .col-auto {
     margin-top: -5%;
   }
 
-  .appointment-display *{
+  .appointment-display * {
     font-size: 12px;
   }
 
-  .scroll{
-        width: 300px;
-        height: 50%;
-        overflow: auto;
-        text-align: justify;
-        padding: 20px;
+  .scroll {
+    width: 300px;
+    height: 50%;
+    overflow: auto;
+    text-align: justify;
+    padding: 20px;
   }
-/* .text{
+  /* .text{
     border: 1px solid black;
     height: 20px;
 } */
 
-#appointmentNotes{
+  #appointmentNotes {
     font-size: 10px;
     height: 20px;
-}
- 
-
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
